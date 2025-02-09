@@ -68,7 +68,6 @@ const countdownTask = TaskScheduler.scheduleRepeating(() => {
 ```
 ## 🔹 Delay Player Action (Simulating async behavior)
 ```
-import { world } from "@minecraft/server";
 
 world.events.playerJoin.subscribe((event) => {
     const player = event.player;
@@ -77,20 +76,17 @@ world.events.playerJoin.subscribe((event) => {
     
     TaskScheduler.schedule(() => {
         console.log(`${player.name}, welcome! Here’s a starter kit.`);
-        // Give items or apply effects here
     }, 100); // 5-second delay
 });
 ```
 ## 🔹 Create a Temporary Effect That Removes Itself
 ```
-import { world, system } from "@minecraft/server";
 
 world.events.playerJoin.subscribe((event) => {
     const player = event.player;
     
     console.log(`${player.name} has temporary night vision!`);
 
-    // Apply an effect (replace with actual effect application)
     TaskScheduler.schedule(() => {
         console.log(`${player.name}'s night vision effect has ended.`);
     }, 400); // Effect lasts for 20 seconds (400 ticks)
@@ -155,4 +151,5 @@ This project is licensed under the MIT License, allowing free use, modification,
 # 🔗 Links & Credits
 
 ✅ GitHub Repository: https://github.com/Rtpflik/minecraft-task-scheduler
+
 ✅ Author: Rtpflik
