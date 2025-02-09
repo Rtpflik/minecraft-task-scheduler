@@ -19,8 +19,11 @@ A lightweight and efficient task scheduling system for Minecraft Bedrock scripti
 # ⚡ Features
 
 ✅ Schedule delayed tasks (Run a function after X ticks)
+
 ✅ Schedule repeating tasks (Loop every X ticks)
+
 ✅ Cancel scheduled tasks (Stop any running task)
+
 ✅ Lightweight & optimized (No unnecessary event listeners)
 
 # 🚀 Usage Examples
