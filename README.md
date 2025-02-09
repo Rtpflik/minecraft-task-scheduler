@@ -1,44 +1,44 @@
-📌 Bedrock Async Task Scheduler
+# 📌 Bedrock Async Task Scheduler
 
 A lightweight and efficient task scheduling system for Minecraft Bedrock scripting. Works like setTimeout() and setInterval() in JavaScript, enabling delayed and repeating tasks without manual tick tracking.
 
-📦 Installation
+# 📦 Installation
 
-Option 1: Clone the Repository
+## Option 1: Clone the Repository
 
-git clone https://github.com/Rtpflik/minecraft-task-scheduler.git
+```git clone https://github.com/Rtpflik/minecraft-task-scheduler.git```
 
-Option 2: Download Manually
+## Option 2: Download Manually
 	1.	Download the latest version from the Releases page.
 	2.	Copy the src folder into your Bedrock scripting project.
 
-Import the Module in Your Script
+# Import the Module in Your Script
 
-import { TaskScheduler } from "./TaskScheduler";
+```import { TaskScheduler } from "./TaskScheduler";```
 
-⚡ Features
+# ⚡ Features
 
 ✅ Schedule delayed tasks (Run a function after X ticks)
 ✅ Schedule repeating tasks (Loop every X ticks)
 ✅ Cancel scheduled tasks (Stop any running task)
 ✅ Lightweight & optimized (No unnecessary event listeners)
 
-🚀 Usage Examples
+# 🚀 Usage Examples
 
-🔹 Schedule a Delayed Function
-
+## 🔹 Schedule a Delayed Function
+```
 TaskScheduler.schedule(() => {
     console.log("This message appears after 5 seconds!");
 }, 100);
-
-🔹 Schedule a Repeating Task
-
+```
+## 🔹 Schedule a Repeating Task
+```
 const taskId = TaskScheduler.scheduleRepeating(() => {
     console.log("This message repeats every 2 seconds!");
 }, 40);
-
-🔹 Cancel a Repeating Task
-
+```
+## 🔹 Cancel a Repeating Task
+```
 const taskId = TaskScheduler.scheduleRepeating(() => {
     console.log("Repeating task running...");
 }, 40);
@@ -48,9 +48,9 @@ TaskScheduler.schedule(() => {
     TaskScheduler.cancel(taskId);
     console.log("Repeating task stopped.");
 }, 200);
-
-🔹 Create a Countdown Timer
-
+```
+## 🔹 Create a Countdown Timer
+```
 let countdown = 10;
 
 const countdownTask = TaskScheduler.scheduleRepeating(() => {
@@ -62,9 +62,9 @@ const countdownTask = TaskScheduler.scheduleRepeating(() => {
         console.log("Countdown complete!");
     }
 }, 20); // Runs every second (20 ticks)
-
-🔹 Delay Player Action (Simulating async behavior)
-
+```
+## 🔹 Delay Player Action (Simulating async behavior)
+```
 import { world } from "@minecraft/server";
 
 world.events.playerJoin.subscribe((event) => {
@@ -77,9 +77,9 @@ world.events.playerJoin.subscribe((event) => {
         // Give items or apply effects here
     }, 100); // 5-second delay
 });
-
-🔹 Create a Temporary Effect That Removes Itself
-
+```
+## 🔹 Create a Temporary Effect That Removes Itself
+```
 import { world, system } from "@minecraft/server";
 
 world.events.playerJoin.subscribe((event) => {
@@ -92,64 +92,64 @@ world.events.playerJoin.subscribe((event) => {
         console.log(`${player.name}'s night vision effect has ended.`);
     }, 400); // Effect lasts for 20 seconds (400 ticks)
 });
-
-🛑 Canceling a Task Manually
-
+```
+## 🛑 Canceling a Task Manually
+```
 const taskId = TaskScheduler.schedule(() => {
     console.log("This task will be canceled before running!");
 }, 100);
 
 // Cancel the task before it runs
 TaskScheduler.cancel(taskId);
+```
+# 📜 API Documentation
 
-📜 API Documentation
-
-🔹 TaskScheduler.schedule(callback, delayTicks)
+## 🔹 TaskScheduler.schedule(callback, delayTicks)
 
 Runs a function once after a specified number of ticks.
 
-Parameters:
+### Parameters:
 	•	callback: () => void – The function to execute.
 	•	delayTicks: number – The delay in game ticks (20 ticks = 1 second).
 
-Returns:
+### fReturns:
 	•	number – The task ID (used for cancellation).
 
-Example:
+### Example:
 
-TaskScheduler.schedule(() => console.log("Hello after 5 seconds!"), 100);
+```TaskScheduler.schedule(() => console.log("Hello after 5 seconds!"), 100);```
 
-🔹 TaskScheduler.scheduleRepeating(callback, intervalTicks)
+## 🔹 TaskScheduler.scheduleRepeating(callback, intervalTicks)
 
 Runs a function repeatedly every specified number of ticks.
 
-Parameters:
+### Parameters:
 	•	callback: () => void – The function to execute.
 	•	intervalTicks: number – The interval in game ticks (20 ticks = 1 second).
 
-Returns:
+### Returns:
 	•	number – The task ID (used for cancellation).
 
-Example:
+### Example:
 
-const taskId = TaskScheduler.scheduleRepeating(() => console.log("Repeating..."), 40);
+```const taskId = TaskScheduler.scheduleRepeating(() => console.log("Repeating..."), 40);```
 
-🔹 TaskScheduler.cancel(taskId)
+## 🔹 TaskScheduler.cancel(taskId)
 
 Stops a scheduled task.
 
-Parameters:
+### Parameters:
 	•	taskId: number – The ID of the task to cancel.
 
-Example:
+### Example:
 
-TaskScheduler.cancel(taskId);
+```TaskScheduler.cancel(taskId);```
 
-📜 License
+# 📜 License
 
 This project is licensed under the MIT License, allowing free use, modification, and distribution.
 
-🔗 Links & Credits
+# 🔗 Links & Credits
 
 ✅ GitHub Repository: https://github.com/Rtpflik/minecraft-task-scheduler
 ✅ Author: Rtpflik
