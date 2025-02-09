@@ -6,7 +6,7 @@ A lightweight and efficient task scheduling system for Minecraft Bedrock scripti
 
 Option 1: Clone the Repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/bedrock-task-scheduler.git
+git clone https://github.com/Rtpflik/minecraft-task-scheduler.git
 
 Option 2: Download Manually
 	1.	Download the latest version from the Releases page.
