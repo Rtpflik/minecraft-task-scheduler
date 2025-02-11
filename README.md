@@ -155,4 +155,5 @@ This project is licensed under the MIT License, allowing free use, modification,
 ✅ Author: Rtpflik
 
 ✅ Discord: rtpflik
+
 You can message me on discord if you have any suggestions or if you need support.
