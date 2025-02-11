@@ -6,7 +6,6 @@ world.events.playerJoin.subscribe((event) => {
 
     console.log(`${player.name} has received a temporary effect!`);
 
-    // Simulate applying an effect
     TaskScheduler.schedule(() => {
         console.log(`${player.name}'s effect has worn off.`);
     }, 400); // 20 seconds 
