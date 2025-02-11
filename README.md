@@ -153,3 +153,6 @@ This project is licensed under the MIT License, allowing free use, modification,
 ✅ GitHub Repository: https://github.com/Rtpflik/minecraft-task-scheduler
 
 ✅ Author: Rtpflik
+
+✅ Discord: rtpflik
+You can message me on discord if you have any suggestions or if you need support.
