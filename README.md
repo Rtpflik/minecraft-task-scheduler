@@ -146,7 +146,7 @@ Stops a scheduled task.
 
 # 📜 License
 
-This project is licensed under the MIT License, allowing free use, modification, and distribution.
+This project is licensed under a modified MIT License. It allows free use, modification, and distribution, but reselling the code as-is is prohibited
 
 # 🔗 Links & Credits
 
