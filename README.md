@@ -144,6 +144,32 @@ Stops a scheduled task.
 
 ```TaskScheduler.cancel(taskId);```
 
+# 🚀 Roadmap  
+
+### **1️⃣ Phase 1: Core Enhancements**  
+- 🔹 **Named Tasks** → Allow developers to assign names to tasks instead of relying on IDs.  
+- 🔹 **Task Prioritization** → Implement priority levels so high-priority tasks execute before others.  
+- 🔹 **Task Dependencies** → Support tasks that should only run after another task completes.  
+- 🔹 **Dynamic Task Modification** → Allow tasks to change their execution time or interval dynamically.  
+
+### **2️⃣ Phase 2: Task Control Improvements**  
+- 🔹 **Pause & Resume Tasks** → Enable tasks to be temporarily paused and resumed later.  
+- 🔹 **Task Groups (Batch Management)** → Allow grouping multiple tasks together and managing them as a batch.  
+- 🔹 **Auto-Expire Tasks** → Add an option for tasks to expire if they haven’t executed after a set time.  
+- 🔹 **Execution Conditions** → Allow tasks to only run when specific world or player conditions are met.  
+
+### **3️⃣ Phase 3: Advanced Features**  
+- 🔹 **Conditional Task Execution** → Tasks will only execute when a specific condition is met.  
+- 🔹 **Delay Scaling (TPS-Based Adjustments)** → If the server lags, tasks will auto-adjust their timing to maintain consistent execution.  
+- 🔹 **Task Queue System** → Implement a queued execution system for tasks that should run sequentially.  
+- 🔹 **Multi-Tick Execution** → Support breaking large tasks into smaller parts that run across multiple ticks to prevent lag spikes.  
+
+### **4️⃣ Phase 4: Debugging & Developer Tools**  
+- 🔹 **Debug Logging** → Enable logging of scheduled tasks for better debugging.  
+- 🔹 **Task Monitoring Commands** → Possible integration of `/taskscheduler list` for debugging task statuses.  
+- 🔹 **Task Execution Tracker** → Track how long each task takes to run for performance monitoring.  
+- 🔹 **Error Handling & Recovery** → Ensure that failed tasks don’t crash the entire scheduler and can automatically retry.  
+
 # 📜 License
 
 This project is licensed under a modified MIT License. It allows free use, modification, and distribution, but reselling the code as-is is prohibited
