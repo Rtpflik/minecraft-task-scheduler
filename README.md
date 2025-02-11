@@ -111,7 +111,7 @@ Runs a function once after a specified number of ticks.
 	•	callback: () => void – The function to execute.
 	•	delayTicks: number – The delay in game ticks (20 ticks = 1 second).
 
-### fReturns:
+### Returns:
 	•	number – The task ID (used for cancellation).
 
 ### Example:
